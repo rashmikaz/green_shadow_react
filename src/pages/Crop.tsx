@@ -8,25 +8,21 @@ import { Calender } from "../components/Calender";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal, openModal } from "../reducers/ModalSlice";
 import { motion } from "motion/react";
-import { easeIn } from "motion";
+import { useState } from "react";
 
 export function Crop() {
-  const dispatch = useDispatch();
-  const isModalOpen = useSelector((state) => state.modal.isModalOpen);
-
-  const handleAddCrop = () => {
-    dispatch(openModal());
-  };
-
-  const handleCloseModal = () => {
-    dispatch(closeModal());
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Crop added!");
-    dispatch(closeModal());
-  };
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleAddCrop = () => {
+      setIsModalOpen(true);
+    };
+    const handleCloseModal = () => {
+      setIsModalOpen(false);
+    };
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      console.log("Crop added!");
+      setIsModalOpen(false);
+    };
   return (
     <>
       <motion.h1
@@ -191,6 +187,7 @@ export function Crop() {
           </div>
         </form>
       </Modal>
+      
     </>
   );
 }
