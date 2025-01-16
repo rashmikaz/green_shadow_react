@@ -1,12 +1,30 @@
 import './App.css'
-import Navigation from './components/navigation'
+import { Dashboard } from './pages/Dashboard'
+import { Field } from './pages/Field'
+
 
 function App() {
 
 
+  const routes = createBrowserRouter([
+    {
+      path:"",
+      element:<RootLayout/>,
+      children:[
+        {path: '', element: <Dashboard/>},
+        {path: '', element: <Field/>},
+        {path: '', element: <Crop/>},
+        {path: '', element: <Staff/>},
+        {path: '', element: <Equipment/>},
+        {path: '', element: <Log/>},
+        {path: '', element: <Vehicle/>}
+      ]
+    }
+  ])
+
   return (
     <>
-      {/* <Navigation></Navigation> */}
+      <RouterProvider router={routes}></RouterProvider>
     </>
   )
 }
