@@ -8,6 +8,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { PiShovelFill } from "react-icons/pi";
 import { MdStickyNote2 } from "react-icons/md";
 import { FaTruck } from "react-icons/fa";
+import "./Sidebar.css";
 export function Sidebar(){
   return(
     <div className='w-[18%] min-h-screen border-t-0 border border-gray-400 text-[max(1vw,10px)]'>

@@ -13,18 +13,19 @@ function App() {
   const routes = createBrowserRouter([
     {
       path:"",
-      element:<RootLayout/>,
-      children:[
-        {path: '', element: <Dashboard/>},
-        {path: '', element: <Field/>},
-        {path: '', element: <Crop/>},
-        {path: '', element: <Staff/>},
-        {path: '', element: <Equipment/>},
-        {path: '', element: <Log/>},
-        {path: '', element: <Vehicle/>}
-      ]
-    }
-  ])
+      element: <RootLayout />,
+      children: [
+        { path: "/", element: <Dashboard /> },
+        { path: "/field", element: <Field /> },
+        { path: "/crop", element: <Crop /> },
+        { path: "/staff", element: <Staff /> },
+        { path: "/equipment", element: <Equipment /> },
+        { path: "/log", element: <Log /> },
+        { path: "/vehicle", element: <Vehicle /> },
+      ],
+    },
+  ]);
+
 
   return (
     <>
