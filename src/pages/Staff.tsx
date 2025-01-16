@@ -10,21 +10,17 @@ import { motion } from "motion/react";
 import { easeIn } from "motion";
 
 export function Staff() {
-  const dispatch = useDispatch();
-  const isModalOpen = useSelector((state) => state.modal.isModalOpen);
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
   const handleAddStaff = () => {
-    dispatch(openModal());
+    setIsModalOpen(true);
   };
-
   const handleCloseModal = () => {
-    dispatch(closeModal());
+    setIsModalOpen(false);
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Staff added!");
-    dispatch(closeModal());
+    setIsModalOpen(false);
   };
   return (
     <>
