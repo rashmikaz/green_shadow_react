@@ -1,3 +1,6 @@
+import { Savebutton } from "../components/Savebutton";
+import { Savebutton } from "../components/Updatebutton";
+
 import { Cards } from "../components/Cards";
 import { Addbutton } from "../components/AddButton";
 export function Vehicle() {
