@@ -1,11 +1,15 @@
+import { createBrowserRouter, RouterProvider } from 'react-router'
 import './App.css'
+import { RootLayout } from './components/RootLayout'
 import { Dashboard } from './pages/Dashboard'
 import { Field } from './pages/Field'
-
+import { Crop } from './pages/Crop'
+import { Staff } from './pages/Staff'
+import { Equipment } from './pages/Equipment'
+import { Log } from './pages/Log'
+import { Vehicle } from './pages/Vehicle'
 
 function App() {
-
-
   const routes = createBrowserRouter([
     {
       path:"",
