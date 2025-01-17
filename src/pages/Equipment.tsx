@@ -5,7 +5,7 @@ import { Savebutton } from "../components/Savebutton";
 import { Savebutton } from "../components/Updatebutton";
 import { Calender } from "../components/Calender";
 import { useDispatch, useSelector } from "react-redux";
-import { closeModal, openModal } from "../reducers/ModalSlice";
+import { closeModal, openModal } from "../components/reducers/Modalslice";
 import { motion } from "motion/react";
 import { easeIn } from "motion";
 
