@@ -1,10 +1,22 @@
+import { useNavigate } from "react-router";
 import { AuthButton } from "../components/AuthButton";
+import { HeaderImage } from "../components/HeaderImage";
+import { Togglepage } from "../components/Togglepage";
+
 export function Login() {
-  const handleLogin = (e) => {
+    const navigate = useNavigate();
+
+     const handleLogin = (e) => {
     e.preventDefault();
     console.log("Logged in!");
+
+    navigate("/dashboard");
+};
+const handleToggle = () => {
+  navigate("/register");
   };
   return (
+    
     <>
       <form
         className="bg-white max-w-xl w-full mx-auto shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] p-6 sm:p-8 rounded-2xl"

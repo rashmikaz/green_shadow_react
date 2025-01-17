@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from "react-router";
 import "./Navbar.css";
 import { Power } from "lucide-react";
+import { Link, useNavigate } from "react-router";
 
 export function Navbar() {
+    const navigate = useNavigate();
+    const handleSignOut = () => {
+    navigate("/");
+  };
   return (
     <>
      <header className="bg-green-500 shadow-lg sticky top-0 z-50">
@@ -19,7 +24,7 @@ export function Navbar() {
           </div>
           <button
             className="ml-auto flex items-center gap-2  bg-white text-green-500 px-4 py-2 rounded-md font-medium hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400"
-            onClick={() => alert("Signed Out")}
+            onClick={handleSignOut}
           >
             <Power className="h-5 w-5" />
             Sign Out
