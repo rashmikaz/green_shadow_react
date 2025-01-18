@@ -192,6 +192,8 @@ export function Crop() {
           </div>
         </form>
       </Modal>
+      console.console.log();
+      
       
     </>
   );
