@@ -1,10 +1,8 @@
 import { Addbutton } from "../components/Addbutton";
-import { Cards } from "../components/Cards";
 import field from "../assets/field.png";
 import { Modal } from "../components/Modal";
 import { Savebutton } from "../components/Savebutton";
 import { Updatebutton } from "../components/Updatebutton";
-import { Calender } from "../components/Calender";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal, openModal } from "../reducers/ModalSlice";
 import { motion } from "motion/react";
@@ -38,11 +36,11 @@ export function Field() {
       </motion.h1>
       <div className="flex flex-wrap gap-6">
         <div className="flex-grow">
-          <Cards />
+         
         </div>
         <div className="flex-shrink-0">
           <div className="relative h-full mr-10">
-            <Calender />
+
           </div>
         </div>
       </div>
