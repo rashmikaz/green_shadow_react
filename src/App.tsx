@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import './App.css'
 import { RootLayout } from './components/RootLayout'
 import { Dashboard } from './pages/Dashboard'
@@ -14,32 +14,32 @@ import { Register } from "./pages/Register";
 function App() {
   const routes = createBrowserRouter([
     {
-      path:"",
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "",
       element: <RootLayout />,
       children: [
-        { path: "/", element: <Login /> },
-        {
-          path: "",
-          element: <RootLayout />,
-          children: [
-            { path: "/dashboard", element: <Dashboard /> },
-            { path: "/field", element: <Field /> },
-            { path: "/crop", element: <Crop /> },
-            { path: "/staff", element: <Staff /> },
-            { path: "/equipment", element: <Equipment /> },
-            { path: "/log", element: <Log /> },
-            { path: "/vehicle", element: <Vehicle /> },
-          ],
-        },
+        { path: "/dashboard", element: <Dashboard /> },
+        { path: "/field", element: <Field /> },
+        { path: "/crop", element: <Crop /> },
+        { path: "/staff", element: <Staff /> },
+        { path: "/equipment", element: <Equipment /> },
+        { path: "/log", element: <Log /> },
+        { path: "/vehicle", element: <Vehicle /> },
       ],
     },
   ]);
-
 
   return (
     <>
       <RouterProvider router={routes}></RouterProvider>
     </>
-  )
+  );
 }
 export default App;

@@ -2,10 +2,10 @@ import { Cards } from "../components/Cards";
 import { Addbutton } from "../components/Addbutton";
 import { Modal } from "../components/Modal";
 import { Savebutton } from "../components/Savebutton";
-import { Savebutton } from "../components/Updatebutton";
+import { Updatebutton } from "../components/Updatebutton";
 import { Calender } from "../components/Calender";
 import { useDispatch, useSelector } from "react-redux";
-import { closeModal, openModal } from "../components/reducers/Modalslice";
+import { closeModal, openModal } from "../reducers/ModalSlice";
 import { motion } from "motion/react";
 import { easeIn } from "motion";
 
